@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Raptus</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+
+
+    <style>
+    body {
+    background: #282828;
+    text-align: center;
+    }
+    a {
+      color: #5a7745;
+    }
+
+    .logo {
+      font: 84px 'Arial Narrow', sans-serif;
+      color: #fefefe;
+      text-transform: uppercase;
+      letter-spacing: 40px;
+    }
+
+    /* stuff for both words */
+    .logo span {
+      position: relative;
+    }
+    .logo span:before,
+    .logo span:after {
+      content: '';
+      position: absolute;
+      border-width: 32px;
+      border-style: solid;
+      border-color: transparent;
+      height: 0;
+      z-index: 10;
+    }
+
+    /* stuff for 1st word */
+    .logo .word1 {
+      color: #5a7745;
+      margin-right: -38px;
+      display: inline-block;/* required for transform */
+      z-index: 10;
+    }
+
+    /* stuff for 2nd word */
+    .logo .word2 {
+      z-index: 0;/* stack 2nd word below */
+    }
+
+    .box {
+      background-color:#5a7745;
+      border: 1px solid grey;
+    }
+    .navbar-brand {
+      font-size: 35px;
+      font-variant: small-caps;
+    }
+    #topContainer{
+        background-image: url("background.jpg");
+        height: 400px;
+        width: 100%;
+        background-size: cover;
+    }
+    #topRow {
+        margin-top: 180px;
+        text-align: center;
+    }
+    #topRow h1 {
+      font-size: 600%;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .marginTop {
+        margin-top: 27px;
+    }
+    .center {
+      text-align: center;
+    }
+    .title {
+      margin-top: 100px;
+      font-size: 300%;
+    }
+    #footer{
+        width: 100%;
+        margin-bottom: 70px;
+    }
+    .appstoreimage {
+      width: 250px;
+    }
+    #brand {
+      color: #5a7745;
+    }
+    h2 {
+      font-size: 300%;
+    }
+    .marginBottom {
+      margin-bottom: 70px;
+    }
+    #black {
+      color: black;
+        }
+    #big {
+      font-size: 20px;
+    }
+    body { background: #faf6ec ; }
+
+    h1 #title{
+        font: 600 1.5em/1 'Raleway', sans-serif;
+        color: rgba(0,0,0,.5);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .5em;
+        position: absolute;
+        top: 25%;
+        width: 100%;
+    }
+
+    span, span:after {
+        font-weight: 900;
+        color: #5a7745;
+        white-space: nowrap;
+        display: inline-block;
+        position: relative;
+        letter-spacing: .1em;
+        padding: .2em 0 .25em 0;
+    }
+    h2{
+      font-family: Helvetica, sans-serif;
+      color: black;
+    }
+    p.six {
+      font-size: 16px;
+      font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    #body {
+      width: 100%;
+      background: white;
+      margin-bottom: 50px;
+    }
+    #ok {
+      color: #17aa1c;
+      word-spacing: -0.5em;
+      letter-spacing: 1px;
+    }
+    #raptus {
+      color: #5a7745;
+    }
+    #align {
+      text-align: left;
+      margin-left: 100px;
+    }
+    .modal-title {
+      text-align: center;
+    }
+    input[type=checkbox]
+    {
+      -ms-transform: scale(2);
+      -moz-transform: scale(2);
+      -webkit-transform: scale(2);
+      -o-transform: scale(2);
+    }
+    .checkboxtext  {
+      font-size: 110%;
+      display: inline;
+    }
+    #app {
+      font-size: 50px;
+      color: black;
+      font-variant: small-caps;
+    }
+    img[src="app-screens6.png"] {
+
+    }
+    #third-section {
+      background-color: white;
+      width: 100%;
+    }
+
+    #text {
+      width: 100%;
+      color: #5a7745;
+      font-weight: bold;
+      text-align: left;
+    }
+    #third-second-section {
+      margin-top: 50px;
+      text-align: left;
+    }
+    #width {
+      width: %
+    }
+    #paragraph {
+      width: 60%;
+      font-size: 15px;
+    }
+    p {
+      font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    #para {
+      text-align: left;
+      font-size: 16px;
+    }
+    #fourth-section {
+      margin-top: 100px;
+    }
+    #fifth-section {
+      background-color: white;
+      width: 100%;
+    }
+    #five {
+      font-size: 80px;
+      text-align: center;
+      width: 100%;
+      color: #5a7745;
+      font-weight: bold;
+    }
+    #para1 {
+      width: 100%;
+      font-size: 20px;
+
+    }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar-collapse">
+
+    <div class="navbar navbar-default navbar-fixed-top" >
+
+        <div class="container">
+
+          <div class="navbar-header">
+
+            <a href="" class="navbar-brand" id="brand">Raptus</a>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+          </div>
+
+          <div class="collapse navbar-collapse">
+
+              <ul class="nav navbar-nav">
+
+                <li class= "active"><a href="#topContainer">Home</a></li>
+                <li><a href="#raptus-body">About Us</a></li>
+                <li><a href="#third-section">Tour</a></li>
+                <li><a href="#footer">Download The App</a></li>
+
+              </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="email" placeholder="Email" class="form-control" />
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-success">Log In</button>
+          </form>
+
+          </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+
+  <div class="modal-dialog">
+
+      <div class="modal-content">
+
+          <div class="modal-header">
+
+            <button class="close" data-dismiss="modal">x</button>
+
+        <h4 class="modal-title"> Sign Up</h4>
+
+        </div>
+
+        <div class="modal-body">
+
+    <form>
+
+        <div class="form-group">
+
+
+          <label for="username">Name</label>
+          <input type="text" class="form-control" name='name'/>
+
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name='email' />
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name='password' maxlength="12" />
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="password">Confirm Password</label>
+          <input type="password" class="form-control" name='password' maxlength="12" />
+
+
+          <input type="checkbox"/><label><h3>  - Accept the <a><u>Terms of service</u></a></h3></label><br>
+          <input type="checkbox"/><label><h3> - Subscribe to our newsletters</h3></label>
+
+        </div>
+
+    </form>
+
+        </div>
+
+        <div class="modal-footer">
+
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
+          <button class="btn btn-success" data-dismiss="modal">Get Started</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    <div class="container contentContainer" id="topContainer">
+
+        <div class="row">
+
+          <div class="col-md-6 col-md-offset-3" id="topRow">
+
+        <h1>Learn how to code in<br><span data-shadow-text="Text-Shadow">Raptus</span></h1>
+
+            <br /> <br />
+
+            <p class="lead" id="big">Always wanted to build your own apps? With Raptus and its 200+ bite-sized, hands-on tutorials, getting started has never been so easy! </p>
+
+            <p class="bold marginTop" id="big">Interested ? Join our mailing list!</p>
+
+            <form class="marginTop">
+
+            <div class="input-group">
+                <span class="input-group-addon">@</span>
+
+                <input type="email" class="form-control" placeholder="Your email" />
+
+            </div>
+
+                <button type="submit" class="btn btn-success btn-lg marginTop">Submit</button>
+
+
+            </form>
+
+          </div>
+    </div>
+</div>
+
+    <div class="container contentContainer marginBottom" id="raptus-body">
+
+
+      <div class="row" class="center">
+
+        <h1 class="center title" id=""><b> Why <span id="raptus">Raptus</span> Is Awesome</b> </h1>
+
+        <p class="lead center">Summary of the app</p>
+
+      <div class="row">
+
+          <div class="col-md-4 marginTop">
+            <h2><span class="glyphicon glyphicon-phone"></span>Mobile Apps</h2>
+        <p class="six">Modernize your business with your very own iPhone and Android apps. Your customers can use these mobile apps to place orders on the go.</p>
+
+           <button class="btn btn-success marginTop" data-toggle="modal" data-target="#myModal">Sign Up!</button>
+          </div>
+
+          <div class="col-md-4 marginTop">
+            <h2><span class="glyphicon glyphicon-film"></span>Tutorials</h2>
+        <p class="six">Our tutorials are divided into two sections - lessons for learning the Engine and more for building Mobile Apps and Production. Each section will have Projects - a set of step-based tutorials, and Topics dividing up additional lessons in more detail.</p>
+
+           <button class="btn btn-success marginTop" data-toggle="modal" data-target="#myModal">Sign Up!</button>
+          </div>
+
+          <div class="col-md-4 marginTop">
+            <h2><span class="glyphicon glyphicon-hd-video"></span>HD Video</h2>
+        <p class="six">These hands-on tutorials can be streamed in HD and can also be streamed in 4k resolution. </p>
+
+           <button class="btn btn-success marginTop" data-toggle="modal" data-target="#myModal">Sign Up!</button>
+          </div>
+
+      </div>
+    </div>
+    <div class="row" class="center">
+
+  <div class="row">
+
+      <div class="col-md-4 marginTop">
+        <h2><span class="glyphicon glyphicon-globe"></span>Socialize</h2>
+    <p class="six">You will be able to share your work, help other people out and even ask for help in forums, and also ask help from other people that are struggling on the same course as you.</p>
+
+       <button class="btn btn-success marginTop" data-toggle="modal" data-target="#myModal">Sign Up!</button>
+      </div>
+
+      <div class="col-md-4 marginTop">
+        <h2><span class="glyphicon glyphicon-download"></span>Download</h2>
+    <p class="six">You will be able to download the tutorials and watch them offline.</p>
+
+       <button class="btn btn-success marginTop" data-toggle="modal" data-target="#myModal">Sign Up!</button>
+      </div>
+
+      <div class="col-md-4 marginTop">
+        <h2><span class="glyphicon glyphicon-education"></span>Certificate</h2>
+    <p class="six">After completing the course, you will be tested for your knowledge of Raptus, you can choose to pay for a certificate by navigating to the course home page and clicking on the Upgrade button under your final grade.</p>
+
+       <button class="btn btn-success marginTop" data-toggle="modal" data-target="#myModal">Sign Up!</button>
+      </div>
+
+            </div>
+        </div>
+    </div>
+
+  <!-- <div class="container" id="body">
+
+    <div class="row" id="div3">
+      <h1 class="center" id="raptus"><b>What Will I learn ? </b></h1>
+
+
+        <div class="col-md-6">
+          <h3 id="align"><span class="glyphicon glyphicon-ok" id="ok"></span> Full understanding of Xcode</h3><br />
+          <h3 id="align"><span class="glyphicon glyphicon-ok" id="ok"></span> Create fully feautured games</h3><br />
+          <h3 id="align"><span class="glyphicon glyphicon-ok" id="ok"></span> Full explanation of all objects and functions within IOS 10 development</h3><br />
+          <h3 id="align"><span class="glyphicon glyphicon-ok" id="ok"></span> Earn revenue from your apps</h3>
+
+        </div>
+
+        <div class="col-md-6">
+          <h3 id="align"><span class="glyphicon glyphicon-ok" id="ok"></span> Learn how to program for IOS 10 to create your own apps</h3><br />
+          <h3 id="align"><span class="glyphicon glyphicon-ok" id="ok"></span> Be able to support all devices and screen sizes</h3><br />
+          <h3 id="align"><span class="glyphicon glyphicon-ok" id="ok"></span> Develop in Objective-C and Python</h3><br />
+          <h3 id="align"><span class="glyphicon glyphicon-ok" id="ok"></span> Start a new career</h3>
+
+        </div>
+    </div>
+</div> -->
+
+    <div  class="container" id="third-section">
+
+      <div class="row" class="center">
+
+          <div class="col-md-6">
+          <p><img src="app-screens6.png"></p>
+          </div>
+
+          <div class="col-md-6" id="third-second-section"  id="width">
+
+            <br /><br /> <br />
+
+            <h2 id="text">Fast cloud upload</h2>
+            <p id="paragraph"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nisi exercitationem amet corporis doloremque reiciendis aut quisquam, illum dolorem temporibus dicta magnam.</p>
+            <br />
+            <h2 id="text">Full analytics</h2>
+            <p id="paragraph" > Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nisi exercitationem amet corporis doloremque reiciendis aut quisquam.</p>
+            <br />
+            <h2 id="text">Full hosted and secure</h2>
+            <p  id="paragraph"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nisi exercitationem amet corporis doloremque reiciendis aut quisquam, illum dolorem temporibus dicta magnam, eligendi voluptatem nemo ea, reprehenderit culpa autem necessitatibus!</p>
+          </div>
+
+
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row" class="center">
+
+          <div class="col-md-6"  id="fourth-section">
+            <br /><br /><br /><br /><br /><br /><br /><br />
+          <h2 id="text">Fully Responsive & Device Friendly</h2>
+          <p id="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices nunc eu varius egestas. Etiam ultricies laoreet velit sed gravida.</p>
+          <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit error adipisci optio tempore voluptates non, deserunt. Eius porro, nisi consequuntur voluptatem pariatur.</p>
+          </div>
+
+          <div class="col-md-6" id="fourth-second-section"  id="width">
+              <br /><br /><br /><br />
+            <p><img src="app-screens3.png"></p>
+          </div>
+
+
+      </div>
+    </div>
+
+    <div class="container" id="fifth-section">
+
+      <div class="row" class="center">
+
+        <br />  <br /> <br />
+
+      <h1 id="five"> Available on all devices </h1>
+      <p id="para1"><span id="raptus">Raptus</span> is available for download on your iPhone, iPad, Android, Windows and the Web.</p>
+      <br /> <br />
+      </div>
+    </div>
+
+     <div class="container" id="fifth-section">
+
+          <div class="row" class="center">
+          <p><img src="app-screens7.png"></p>
+
+          </div>
+        </div>
+
+   <div class="container" id="footer">
+
+     <div class="row">
+
+       <h1 class="logo">
+         <span class="word1">Download </span>
+         <span class="word2">The App</span>
+       </h1>
+
+
+
+
+         <h2 class="center">Try <span id="raptus">Raptus</span> today and start your journey of becoming an expert developer!</h2>
+
+         <p class="center"><img src="appstore.jpg" class="appstoreimage"></p>
+
+          <p class="center"><img src="playstore.png" class="appstoreimage"></p>
+
+     </div>
+   </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<script>
+      $(".contentContainer").css("min-height",$(window).height());
+</script>
+  </body>
+</html>
